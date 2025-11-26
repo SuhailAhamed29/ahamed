@@ -1,7 +1,7 @@
 /* Global reset-ish */
 * {
   box-sizing: border-box;
-  margin: 10;
+  margin: 0;
   padding: 0;
 }
 
@@ -17,29 +17,24 @@ body {
     -system-ui, sans-serif; /* MacBook style font */
 }
 
-body, html {
-  height: 100%;
-  min-height: 100vh;
-}
-
 /* App wrapper */
-/* Modify .app to center content */
 .app {
   min-height: 100vh;
+  padding: 3rem 1.5rem 4rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* vertical center */
-  align-items: center;       /* horizontal center */
-  padding: 0;                /* no global padding */
+  gap: 3.5rem;
+}
+
+/* Shared section layout: centered, not full width */
+.section {
+  display: flex;
+  justify-content: center;
 }
 
 .section-inner {
   width: 100%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;        /* makes content truly center */
-  padding-left: 10vw;
-  padding-right: 10vw;       /* adjustable side-space for balance */
+  max-width: 900px; /* keeps content in center, not full-width */
 }
 
 /* Headings */
